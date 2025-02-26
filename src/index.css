@@ -1,7 +1,8 @@
 :root {
   --blue: #312eb5;
   --hover-blue: #8e94d2;
-  --journal-item-color: #ffffff19;
+  --journal-item-color: #ffffff08;
+  --hover-journal-item-color: #ffffff1a;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

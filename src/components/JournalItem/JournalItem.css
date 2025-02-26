@@ -1,3 +1,25 @@
-.journal-item {
-  background-color: var(--journal-item-color);
+.journal-item__header {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+.journal-item__inner {
+  display: flex;
+  gap: 10px;
+}
+.journal-item__date {
+  color: #ffffff66;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.11px;
+  letter-spacing: 0%;
+}
+.journal-item__text {
+  color: #ffffff99;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.11px;
+  letter-spacing: 0%;
+  overflow: hidden;
 }

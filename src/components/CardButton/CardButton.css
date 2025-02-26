@@ -1,0 +1,14 @@
+.card-button {
+  font-family: sans-serif;
+  background-color: var(--journal-item-color);
+  padding: 20px;
+  gap: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  text-align: left;
+  border: none;
+  transition: background-color 0.25s ease-in-out;
+}
+.card-button:hover {
+  background-color: var(--hover-journal-item-color);
+}
