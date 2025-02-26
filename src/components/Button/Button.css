@@ -1,0 +1,17 @@
+.button {
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: gray;
+  cursor: pointer;
+  border: none;
+}
+.save {
+  padding: 8px 30px;
+  transition: background-color 0.25s ease;
+  background-color: var(--blue);
+  border-radius: 10px;
+}
+.save:hover {
+  background-color: var(--hover-blue);
+}
