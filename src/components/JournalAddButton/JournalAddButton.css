@@ -1,0 +1,9 @@
+.add-bt {
+  padding: 10px 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px 0;
+  font-weight: 600;
+  font-size: 1rem;
+}

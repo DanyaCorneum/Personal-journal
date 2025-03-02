@@ -1,38 +1,48 @@
-import CardButton from "./components/CardButton/CardButton";
-import Button from "./components/Button/Button";
-import JournalItem from "./components/JournalItem/JournalItem";
+import LeftPanel from "./layout/LeftPanel/LeftPanel.jsx";
+import Body from "./layout/Body/Body.jsx";
+import Header from "./layout/Header/Header.jsx";
+import JournalList from "./components/JournalList/JournalList.jsx";
+import JournalAddButton from "./components/JournalAddButton/JournalAddButton.jsx";
+import JournalItem from "./components/JournalItem/JournalItem.jsx";
+import JournalForm from "./components/JournalForm/JournalForm.jsx";
 import "./App.css";
+import { useState } from "react";
 
 function App() {
-  const data = [
-    {
-      title: "Подготовка к обновлению курсов",
-      text: "Сегодня провёл весь день за...",
-      date: new Date(),
-    },
-    {
-      title: "Поход в годы",
-      text: "Думал, что очень много време...",
-      date: new Date(),
-    },
-  ];
+  const [data, setData] = useState([]);
+
+  const submit = (newData) => {
+    setData([
+      ...data,
+      {
+        id: data.length !== 0 ? Math.max(...data.map((i) => i.id)) + 1 : 0,
+        title: newData.title,
+        text: newData.text,
+        date: newData.date,
+      },
+    ]);
+    console.log();
+  };
   return (
-    <>
-      <h1>Project</h1>
-      <Button />
-      <CardButton>
-        <JournalItem
-          title={data[0].title}
-          text={data[0].text}
-          date={data[0].date}
-        />
-      </CardButton>
-      <JournalItem
-        title={data[1].title}
-        text={data[1].text}
-        date={data[1].date}
-      />
-    </>
+    <div className="app">
+      <LeftPanel>
+        <Header></Header>
+        <JournalAddButton />
+        <JournalList>
+          {data.map((el) => (
+            <JournalItem
+              key={el.id}
+              title={el.title}
+              date={el.date}
+              text={el.text}
+            ></JournalItem>
+          ))}
+        </JournalList>
+      </LeftPanel>
+      <Body>
+        <JournalForm func={submit} />
+      </Body>
+    </div>
   );
 }
 
