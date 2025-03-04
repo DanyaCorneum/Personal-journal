@@ -1,8 +1,11 @@
 import "./Button.css";
-import { useState } from "react";
 
-function Button({ text }) {
-  return <button className="button save">{text}</button>;
+function Button({ text, className }) {
+  return (
+    <button className={`button ${className !== undefined ? className : ""}`}>
+      {text}
+    </button>
+  );
 }
 
 export default Button;

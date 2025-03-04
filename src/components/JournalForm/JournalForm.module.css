@@ -1,0 +1,37 @@
+.journal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.journal-form * {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.post {
+  width: 100%;
+}
+.title {
+  background-color: rgba(255, 255, 255, 0);
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+.save {
+  padding: 8px 30px;
+  transition: background-color 0.25s ease;
+  background-color: var(--blue);
+  border-radius: 10px;
+  max-width: 200px;
+}
+.save:hover {
+  background-color: var(--hover-blue);
+}
+.date,
+.text {
+  border-bottom: 2px solid gray;
+}
+
+.invalid {
+  border: 2px solid red;
+  border-bottom: 2px solid red;
+}
